@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qoyan subs — Актуальные и выгодные подписки</title>
+  <meta name="description" content="qoyan subs — Премиальные подписки по доступным ценам: Gemini AI PRO, Canva PRO, Coursera, CapCut PRO, Duolingo. Быстрая выдача, гарантия на активацию.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Inter (sans) & Newsreader (serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background decorative pattern -->
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" aria-label="qoyan subs главная">
+        <img src="assets/logo.png" alt="qoyan subs" class="logo-img">
+        <span class="brand-text">qoyan <span>subs</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#catalog" class="nav-link">Подписки</a>
+        <a href="#guarantee" class="nav-link">Гарантия</a>
+        <a href="#order" class="nav-link">Заказ</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+        <a href="javascript:void(0)" class="nav-link legal-link" onclick="openModal('offerModal')">Оферта</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://t.me/easouthpaw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm header-tg">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+          Telegram
+        </a>
+        <a href="#order" class="btn btn-primary btn-sm">Купить</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (Nace.ai Inspired) -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Актуальный прайс-лист 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          Премиум подписки<br>
+          <em>по честным ценам</em>
+        </h1>
+
+        <p class="hero-description">
+          Экономьте до 80% на сервисах для работы, учебы, видеомонтажа и нейросетей. 
+          Проверенная выдача доступов, оперативная связь и гарантия на активацию.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#catalog" class="btn btn-primary btn-lg">
+            Выбрать подписку
+            <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.513a.75.75 0 01-1.08 0l-5.25-5.513a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="https://t.me/easouthpaw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+            Написать в Telegram
+          </a>
+          <a href="https://wa.me/77470124268?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B8%20qoyan%20subs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.41 0-2.8-.36-4.02-1.05l-.29-.16-3.12.82.83-3.04-.19-.31c-.76-1.24-1.17-2.67-1.17-4.14 0-4.54 3.7-8.24 8.24-8.24zm-3.53 4.31c-.2 0-.43 0-.64.03-.23.03-.5.16-.68.43-.24.36-.8 1.05-.8 2.37 0 1.31.84 2.58.96 2.75.12.16 1.63 2.65 4.02 3.59 1.99.78 2.4.63 2.83.59.43-.04 1.38-.56 1.57-1.1.2-.55.2-1.02.14-1.12-.06-.1-.23-.16-.49-.29-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.18.26-.68.85-.84 1.02-.15.17-.31.19-.57.06-.26-.13-1.1-.41-2.1-1.3-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.57-1.38-.79-1.89-.21-.5-.43-.43-.59-.44l-.45-.01z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+
+        <!-- Trust Features Strip -->
+        <div class="trust-features">
+          <div class="trust-item">
+            <span class="trust-icon">⚡</span>
+            <div>
+              <strong>Активация за 5-15 минут</strong>
+              <p>Быстрая передача данных сразу после связи</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🛡️</span>
+            <div>
+              <strong>Гарантия на вход</strong>
+              <p>Проверка работоспособности при получении</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">💬</span>
+            <div>
+              <strong>Живой контакт 7 дней в неделю</strong>
+              <p>Всегда на связи в Telegram и WhatsApp</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="section catalog-section" id="catalog">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Каталог подписок</span>
+          <h2 class="section-title">Выберите подходящий сервис</h2>
+          <p class="section-subtitle">Прозрачные тарифы без скрытых платежей и автосписаний с вашей личной карты.</p>
+        </div>
+
+        <div class="format-legend-bar">
+          <div class="legend-item">
+            <span class="legend-badge legend-ready">Готовый аккаунт</span>
+            <span class="legend-text"><strong>Coursera</strong> и <strong>CapCut</strong> — выдаются готовые логин и пароль</span>
+          </div>
+          <span class="legend-sep">•</span>
+          <div class="legend-item">
+            <span class="legend-badge legend-personal">На ваш личный аккаунт</span>
+            <span class="legend-text"><strong>Gemini AI</strong>, <strong>Canva</strong>, <strong>Duolingo</strong> — подключение к вашему профилю</span>
+          </div>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- Product 1: Gemini AI PRO -->
+          <article class="product-card" data-product-id="gemini" data-product-name="Gemini AI PRO 18 месяцев" data-price="3500">
+            <div class="card-top">
+              <div class="product-icon-wrap">
+                <img src="assets/icons/gemini.svg" alt="Google Gemini AI" class="product-svg">
+              </div>
+              <span class="badge badge-personal">На ваш личный аккаунт</span>
+            </div>
+
+            <div class="card-content">
+              <span class="product-category">Нейросеть / AI Ассистент</span>
+              <h3 class="product-title">Gemini AI PRO</h3>
+              <div class="product-period">Тип: <strong>На ваш личный Google аккаунт</strong> (18 мес.)</div>
+              <p class="product-desc">Подключение на вашу личную почту Google. Все диалоги, файлы и история остаются только у вас.</p>
+              
+              <ul class="product-features">
+                <li><span class="check">✓</span> Активация на ваш личный профиль Google</li>
+                <li><span class="check">✓</span> 18 месяцев бесперебойного доступа</li>
+                <li><span class="check">✓</span> Полная конфиденциальность ваших данных</li>
+              </ul>
+            </div>
+
+            <div class="card-bottom">
+              <div class="price-wrap">
+                <span class="price-amount">3 500 ₸</span>
+                <span class="price-note">за весь период (18 мес.)</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-block select-product-btn" onclick="selectProduct('Gemini AI PRO 18 мес (На ваш личный аккаунт) — 3 500 ₸')">
+                  Оформить заказ
+                </button>
+                <div class="direct-quick-links">
+                  <a href="https://t.me/easouthpaw?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20Gemini%20AI%20PRO%2018%20%D0%BC%D0%B5%D1%81%D1%8F%D1%86%D0%B5%D0%B2%20(%D0%BD%D0%B0%20%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%203500%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-tg" title="Купить через Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+                    Купить в TG
+                  </a>
+                  <a href="https://wa.me/77470124268?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20Gemini%20AI%20PRO%2018%20%D0%BC%D0%B5%D1%81%D1%8F%D1%86%D0%B5%D0%B2%20(%D0%BD%D0%B0%20%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%203500%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-wa" title="Купить через WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.41 0-2.8-.36-4.02-1.05l-.29-.16-3.12.82.83-3.04-.19-.31c-.76-1.24-1.17-2.67-1.17-4.14 0-4.54 3.7-8.24 8.24-8.24zm-3.53 4.31c-.2 0-.43 0-.64.03-.23.03-.5.16-.68.43-.24.36-.8 1.05-.8 2.37 0 1.31.84 2.58.96 2.75.12.16 1.63 2.65 4.02 3.59 1.99.78 2.4.63 2.83.59.43-.04 1.38-.56 1.57-1.1.2-.55.2-1.02.14-1.12-.06-.1-.23-.16-.49-.29-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.18.26-.68.85-.84 1.02-.15.17-.31.19-.57.06-.26-.13-1.1-.41-2.1-1.3-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.57-1.38-.79-1.89-.21-.5-.43-.43-.59-.44l-.45-.01z"/></svg>
+                    Купить в WA
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: Canva PRO -->
+          <article class="product-card" data-product-id="canva" data-product-name="Слот в команде Canva PRO" data-price="2000">
+            <div class="card-top">
+              <div class="product-icon-wrap">
+                <img src="assets/icons/canva.svg" alt="Canva PRO" class="product-svg">
+              </div>
+              <span class="badge badge-personal">На ваш личный аккаунт</span>
+            </div>
+
+            <div class="card-content">
+              <span class="product-category">Графика и дизайн</span>
+              <h3 class="product-title">Canva PRO</h3>
+              <div class="product-period">Тип: <strong>На вашу личную почту</strong> (слот в команде)</div>
+              <p class="product-desc">Подключение вашей собственной почты Canva по приглашению в Pro-команду. Ваши дизайны приватны.</p>
+              
+              <ul class="product-features">
+                <li><span class="check">✓</span> Подключение на вашу личную почту Canva</li>
+                <li><span class="check">✓</span> Ваши проекты не видны другим участникам</li>
+                <li><span class="check">✓</span> Полный доступ ко всем Pro-шаблонам и AI</li>
+              </ul>
+            </div>
+
+            <div class="card-bottom">
+              <div class="price-wrap">
+                <span class="price-amount">2 000 ₸</span>
+                <span class="price-note">за 1 слот в команде</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-block select-product-btn" onclick="selectProduct('Canva PRO слот (На ваш личный аккаунт) — 2 000 ₸')">
+                  Оформить заказ
+                </button>
+                <div class="direct-quick-links">
+                  <a href="https://t.me/easouthpaw?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D1%81%D0%BB%D0%BE%D1%82%20Canva%20PRO%20(%D0%BD%D0%B0%20%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%202000%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-tg" title="Купить через Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+                    Купить в TG
+                  </a>
+                  <a href="https://wa.me/77470124268?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D1%81%D0%BB%D0%BE%D1%82%20Canva%20PRO%20(%D0%BD%D0%B0%20%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%202000%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-wa" title="Купить через WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.41 0-2.8-.36-4.02-1.05l-.29-.16-3.12.82.83-3.04-.19-.31c-.76-1.24-1.17-2.67-1.17-4.14 0-4.54 3.7-8.24 8.24-8.24zm-3.53 4.31c-.2 0-.43 0-.64.03-.23.03-.5.16-.68.43-.24.36-.8 1.05-.8 2.37 0 1.31.84 2.58.96 2.75.12.16 1.63 2.65 4.02 3.59 1.99.78 2.4.63 2.83.59.43-.04 1.38-.56 1.57-1.1.2-.55.2-1.02.14-1.12-.06-.1-.23-.16-.49-.29-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.18.26-.68.85-.84 1.02-.15.17-.31.19-.57.06-.26-.13-1.1-.41-2.1-1.3-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.57-1.38-.79-1.89-.21-.5-.43-.43-.59-.44l-.45-.01z"/></svg>
+                    Купить в WA
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: Coursera -->
+          <article class="product-card" data-product-id="coursera" data-product-name="Coursera готовый акк" data-price="3500">
+            <div class="card-top">
+              <div class="product-icon-wrap">
+                <img src="assets/icons/coursera.svg" alt="Coursera" class="product-svg">
+              </div>
+              <span class="badge badge-ready">Готовый аккаунт</span>
+            </div>
+
+            <div class="card-content">
+              <span class="product-category">Образование и курсы</span>
+              <h3 class="product-title">Coursera</h3>
+              <div class="product-period">Тип: <strong>Готовый аккаунт (логин + пароль)</strong></div>
+              <p class="product-desc">Выдается отдельный готовый аккаунт с логином и паролем. Подписка уже активна — заходите и учитесь.</p>
+              
+              <ul class="product-features">
+                <li><span class="check">✓</span> <strong>Готовый аккаунт с логином и паролем</strong></li>
+                <li><span class="check">✓</span> Доступ ко всем специализациям и курсам</li>
+                <li><span class="check">✓</span> Проверенная валидность перед выдачей</li>
+              </ul>
+            </div>
+
+            <div class="card-bottom">
+              <div class="price-wrap">
+                <span class="price-amount">3 500 ₸</span>
+                <span class="price-note">за готовый аккаунт</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-block select-product-btn" onclick="selectProduct('Coursera — 3 500 ₸ (Готовый аккаунт)')">
+                  Оформить заказ
+                </button>
+                <div class="direct-quick-links">
+                  <a href="https://t.me/easouthpaw?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20Coursera%20(%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%203500%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-tg" title="Купить через Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+                    Купить в TG
+                  </a>
+                  <a href="https://wa.me/77470124268?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20Coursera%20(%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%203500%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-wa" title="Купить через WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.41 0-2.8-.36-4.02-1.05l-.29-.16-3.12.82.83-3.04-.19-.31c-.76-1.24-1.17-2.67-1.17-4.14 0-4.54 3.7-8.24 8.24-8.24zm-3.53 4.31c-.2 0-.43 0-.64.03-.23.03-.5.16-.68.43-.24.36-.8 1.05-.8 2.37 0 1.31.84 2.58.96 2.75.12.16 1.63 2.65 4.02 3.59 1.99.78 2.4.63 2.83.59.43-.04 1.38-.56 1.57-1.1.2-.55.2-1.02.14-1.12-.06-.1-.23-.16-.49-.29-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.18.26-.68.85-.84 1.02-.15.17-.31.19-.57.06-.26-.13-1.1-.41-2.1-1.3-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.57-1.38-.79-1.89-.21-.5-.43-.43-.59-.44l-.45-.01z"/></svg>
+                    Купить в WA
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4: CapCut PRO -->
+          <article class="product-card" data-product-id="capcut" data-product-name="Капкат про на месяц" data-price="2000">
+            <div class="card-top">
+              <div class="product-icon-wrap">
+                <img src="assets/icons/capcut.svg" alt="CapCut PRO" class="product-svg">
+              </div>
+              <span class="badge badge-ready">Готовый аккаунт</span>
+            </div>
+
+            <div class="card-content">
+              <span class="product-category">Видеомонтаж и эффекты</span>
+              <h3 class="product-title">CapCut PRO</h3>
+              <div class="product-period">Тип: <strong>Готовый аккаунт (логин + пароль)</strong> на 1 мес.</div>
+              <p class="product-desc">Выдаются логин и пароль от готового Pro-аккаунта. Все функции Pro разблокированы на 30 дней.</p>
+              
+              <ul class="product-features">
+                <li><span class="check">✓</span> <strong>Готовый аккаунт с логином и паролем</strong></li>
+                <li><span class="check">✓</span> Доступ ко всем платным Pro-эффектам</li>
+                <li><span class="check">✓</span> Экспорт без водяных знаков в 4K</li>
+              </ul>
+            </div>
+
+            <div class="card-bottom">
+              <div class="price-wrap">
+                <span class="price-amount">2 000 ₸</span>
+                <span class="price-note">за 1 месяц использования</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-block select-product-btn" onclick="selectProduct('CapCut PRO 1 месяц (Готовый аккаунт) — 2 000 ₸')">
+                  Оформить заказ
+                </button>
+                <div class="direct-quick-links">
+                  <a href="https://t.me/easouthpaw?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20CapCut%20PRO%201%20%D0%BC%D0%B5%D1%81%D1%8F%D1%86%20(%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%202000%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-tg" title="Купить через Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+                    Купить в TG
+                  </a>
+                  <a href="https://wa.me/77470124268?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20CapCut%20PRO%201%20%D0%BC%D0%B5%D1%81%D1%8F%D1%86%20(%D0%93%D0%BE%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%202000%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-wa" title="Купить через WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.41 0-2.8-.36-4.02-1.05l-.29-.16-3.12.82.83-3.04-.19-.31c-.76-1.24-1.17-2.67-1.17-4.14 0-4.54 3.7-8.24 8.24-8.24zm-3.53 4.31c-.2 0-.43 0-.64.03-.23.03-.5.16-.68.43-.24.36-.8 1.05-.8 2.37 0 1.31.84 2.58.96 2.75.12.16 1.63 2.65 4.02 3.59 1.99.78 2.4.63 2.83.59.43-.04 1.38-.56 1.57-1.1.2-.55.2-1.02.14-1.12-.06-.1-.23-.16-.49-.29-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.18.26-.68.85-.84 1.02-.15.17-.31.19-.57.06-.26-.13-1.1-.41-2.1-1.3-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.57-1.38-.79-1.89-.21-.5-.43-.43-.59-.44l-.45-.01z"/></svg>
+                    Купить в WA
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5: Duolingo -->
+          <article class="product-card" data-product-id="duolingo" data-product-name="Дуолинго на год" data-price="3500">
+            <div class="card-top">
+              <div class="product-icon-wrap">
+                <img src="assets/icons/duolingo.svg" alt="Duolingo" class="product-svg">
+              </div>
+              <span class="badge badge-personal">На ваш личный аккаунт</span>
+            </div>
+
+            <div class="card-content">
+              <span class="product-category">Изучение языков</span>
+              <h3 class="product-title">Duolingo Super</h3>
+              <div class="product-period">Тип: <strong>На ваш личный профиль</strong> (12 месяцев)</div>
+              <p class="product-desc">Подключение Super на ваш существующий профиль Duolingo. Весь ваш ударный режим (streak) и очки сохраняются.</p>
+              
+              <ul class="product-features">
+                <li><span class="check">✓</span> Активация на ваш личный существующий профиль</li>
+                <li><span class="check">✓</span> Сохранение всего прогресса и ударного режима</li>
+                <li><span class="check">✓</span> 365 дней без ограничений и рекламы</li>
+              </ul>
+            </div>
+
+            <div class="card-bottom">
+              <div class="price-wrap">
+                <span class="price-amount">3 500 ₸</span>
+                <span class="price-note">за 1 год подписки</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-block select-product-btn" onclick="selectProduct('Duolingo 1 год (На ваш личный аккаунт) — 3 500 ₸')">
+                  Оформить заказ
+                </button>
+                <div class="direct-quick-links">
+                  <a href="https://t.me/easouthpaw?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20Duolingo%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D0%B4%20(%D0%BD%D0%B0%20%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%203500%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-tg" title="Купить через Telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+                    Купить в TG
+                  </a>
+                  <a href="https://wa.me/77470124268?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20Duolingo%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D0%B4%20(%D0%BD%D0%B0%20%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82)%20%D0%B7%D0%B0%203500%20%E2%82%B8" target="_blank" rel="noopener noreferrer" class="quick-link quick-wa" title="Купить через WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.41 0-2.8-.36-4.02-1.05l-.29-.16-3.12.82.83-3.04-.19-.31c-.76-1.24-1.17-2.67-1.17-4.14 0-4.54 3.7-8.24 8.24-8.24zm-3.53 4.31c-.2 0-.43 0-.64.03-.23.03-.5.16-.68.43-.24.36-.8 1.05-.8 2.37 0 1.31.84 2.58.96 2.75.12.16 1.63 2.65 4.02 3.59 1.99.78 2.4.63 2.83.59.43-.04 1.38-.56 1.57-1.1.2-.55.2-1.02.14-1.12-.06-.1-.23-.16-.49-.29-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.18.26-.68.85-.84 1.02-.15.17-.31.19-.57.06-.26-.13-1.1-.41-2.1-1.3-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.57-1.38-.79-1.89-.21-.5-.43-.43-.59-.44l-.45-.01z"/></svg>
+                    Купить в WA
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantee & Terms Alert Section (CRITICAL SECTION) -->
+    <section class="section guarantee-section" id="guarantee">
+      <div class="container">
+        <div class="guarantee-box">
+          <div class="guarantee-badge">
+            <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+            <span>Регламент гарантии и условия обслуживания</span>
+          </div>
+
+          <h2 class="guarantee-title">Гарантия действует исключительно на момент активации</h2>
+
+          <div class="guarantee-body">
+            <div class="guarantee-point">
+              <div class="point-num">01</div>
+              <div class="point-text">
+                <strong>Гарантия на первичный вход</strong>
+                <p>Мы гарантируем валидность данных, приглашений и работоспособность подписки строго в момент передачи доступа и вашей первой авторизации.</p>
+              </div>
+            </div>
+
+            <div class="guarantee-point">
+              <div class="point-num">02</div>
+              <div class="point-text">
+                <strong>Отказ от возврата после активации</strong>
+                <p>После того как доступ передан, вход в систему выполнен и услуга активирована, <strong>возврат денежных средств не производится</strong>.</p>
+              </div>
+            </div>
+
+            <div class="guarantee-point">
+              <div class="point-num">03</div>
+              <div class="point-text">
+                <strong>Обязательное согласие</strong>
+                <p>Оформляя заказ на данном сайте или через наши мессенджеры, покупатель подтверждает, что внимательно ознакомился с данным условием и принимает его в полном объеме.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="guarantee-footer">
+            <div class="guarantee-links">
+              <button type="button" class="btn-link" onclick="openModal('offerModal')">
+                Читать полный текст Публичной оферты →
+              </button>
+              <button type="button" class="btn-link" onclick="openModal('privacyModal')">
+                Политика конфиденциальности →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order & Contacts Section -->
+    <section class="section order-section" id="order">
+      <div class="container">
+        <div class="order-grid">
+
+          <!-- Left column: Direct Contacts (Click to Chat) -->
+          <div class="contacts-card" id="contacts">
+            <span class="section-tag">Мгновенная связь</span>
+            <h3 class="contacts-title">Напишите нам напрямую</h3>
+            <p class="contacts-desc">
+              Не хотите ждать ответа на почту? Напишите прямо в удобный мессенджер — ответим моментально и сразу передадим доступ.
+            </p>
+
+            <div class="contact-buttons-list">
+              <!-- Telegram Link -->
+              <a href="https://t.me/easouthpaw" target="_blank" rel="noopener noreferrer" class="contact-card-btn tg-card">
+                <div class="contact-icon-box tg-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-label">Telegram (быстрый ответ)</span>
+                  <strong class="contact-value">@easouthpaw</strong>
+                </div>
+                <span class="contact-arrow">↗</span>
+              </a>
+
+              <!-- WhatsApp Link -->
+              <a href="https://wa.me/77470124268?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%AF%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20qoyan%20subs%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D1%83." target="_blank" rel="noopener noreferrer" class="contact-card-btn wa-card">
+                <div class="contact-icon-box wa-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.16 8.16 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.41 0-2.8-.36-4.02-1.05l-.29-.16-3.12.82.83-3.04-.19-.31c-.76-1.24-1.17-2.67-1.17-4.14 0-4.54 3.7-8.24 8.24-8.24zm-3.53 4.31c-.2 0-.43 0-.64.03-.23.03-.5.16-.68.43-.24.36-.8 1.05-.8 2.37 0 1.31.84 2.58.96 2.75.12.16 1.63 2.65 4.02 3.59 1.99.78 2.4.63 2.83.59.43-.04 1.38-.56 1.57-1.1.2-.55.2-1.02.14-1.12-.06-.1-.23-.16-.49-.29-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.18.26-.68.85-.84 1.02-.15.17-.31.19-.57.06-.26-.13-1.1-.41-2.1-1.3-.77-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.57-1.38-.79-1.89-.21-.5-.43-.43-.59-.44l-.45-.01z"/></svg>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-label">WhatsApp (чат с оператором)</span>
+                  <strong class="contact-value">+7 (747) 012-42-68</strong>
+                </div>
+                <span class="contact-arrow">↗</span>
+              </a>
+
+              <!-- Email Link -->
+              <a href="mailto:easouthpaw@mail.ru" class="contact-card-btn email-card">
+                <div class="contact-icon-box email-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div class="contact-info">
+                  <span class="contact-label">Электронная почта</span>
+                  <strong class="contact-value">easouthpaw@mail.ru</strong>
+                </div>
+                <span class="contact-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right column: Formspree Order Form -->
+          <div class="form-card">
+            <span class="section-tag">Форма оформления</span>
+            <h3 class="form-title">Заявка на получение доступа</h3>
+            <p class="form-desc">Заполните поля ниже, и мы свяжемся с вами для отправки реквизитов и передачи доступа.</p>
+
+            <form id="orderForm" action="https://formspree.io/f/xbgdaray" method="POST" class="order-form">
+              <!-- Formspree settings -->
+              <input type="hidden" name="_subject" value="Новый заказ подписки с qoyan subs">
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="form-group">
+                <label for="clientName" class="form-label">Ваше имя <span class="required-star">*</span></label>
+                <input type="text" id="clientName" name="name" class="form-input" placeholder="Как к вам обращаться" required>
+              </div>
+
+              <div class="form-group">
+                <label for="clientContact" class="form-label">
+                  Контакт для связи: Telegram ник или WhatsApp телефон <span class="required-star">*</span>
+                </label>
+                <input type="text" id="clientContact" name="contact" class="form-input" placeholder="@nickname или +7 777 000 00 00" required>
+                <span class="form-hint">Обязательно оставьте контакт, чтобы мы могли связаться с вами и передать доступ!</span>
+              </div>
+
+              <div class="form-group">
+                <label for="productSelect" class="form-label">Интересующая подписка <span class="required-star">*</span></label>
+                <select id="productSelect" name="subscription" class="form-select" required>
+                  <option value="" disabled selected>— Выберите нужную подписку —</option>
+                  <option value="Coursera — 3 500 ₸ [Готовый аккаунт]">Coursera — 3 500 ₸ [Готовый аккаунт]</option>
+                  <option value="CapCut PRO 1 месяц — 2 000 ₸ [Готовый аккаунт]">CapCut PRO 1 месяц — 2 000 ₸ [Готовый аккаунт]</option>
+                  <option value="Gemini AI PRO 18 мес — 3 500 ₸ [На ваш личный аккаунт]">Gemini AI PRO 18 мес — 3 500 ₸ [На ваш личный аккаунт]</option>
+                  <option value="Canva PRO слот — 2 000 ₸ [На ваш личный аккаунт]">Canva PRO слот — 2 000 ₸ [На ваш личный аккаунт]</option>
+                  <option value="Duolingo 1 год — 3 500 ₸ [На ваш личный аккаунт]">Duolingo 1 год — 3 500 ₸ [На ваш личный аккаунт]</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="clientComment" class="form-label">Комментарий или пожелания <span class="label-optional">(необязательно)</span></label>
+                <textarea id="clientComment" name="comment" class="form-textarea" rows="2" placeholder="Например: удобнее получить в Telegram или WhatsApp"></textarea>
+              </div>
+
+              <!-- Required Warranty & Offer Checkbox -->
+              <div class="form-checkbox-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="termsConsent" name="terms_agreement" required>
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">
+                    Я ознакомлен(-а) и безоговорочно согласен(-на) с <strong>условиями гарантии</strong>: гарантия действует <em>строго на момент первичной активации</em> продукта. После передачи рабочего доступа и входа возврат средств не производится. Принимаю условия <a href="javascript:void(0)" onclick="openModal('offerModal')" class="link-inline">Публичной оферты</a> и <a href="javascript:void(0)" onclick="openModal('privacyModal')" class="link-inline">Политики конфиденциальности</a>.
+                  </span>
+                </label>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-block btn-submit">
+                <span class="btn-text">Отправить заявку</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+
+              <div id="formStatus" class="form-status" role="alert"></div>
+
+              <div class="form-alt-cta">
+                <span>Нужен доступ прямо сейчас без ожидания?</span>
+                <div class="form-alt-buttons">
+                  <a href="https://t.me/easouthpaw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                    Написать в Telegram ↗
+                  </a>
+                  <a href="https://wa.me/77470124268" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                    Написать в WhatsApp ↗
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <img src="assets/logo.png" alt="qoyan subs" class="logo-img">
+            <span class="brand-text">qoyan <span>subs</span></span>
+          </div>
+          <p class="footer-brand-desc">
+            Эстетичный и надежный сервис доступных подписок на мировые цифровые платформы.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="#catalog">Каталог тарифов</a></li>
+            <li><a href="#guarantee">Регламент гарантии</a></li>
+            <li><a href="#order">Форма заказа</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Правовая информация</h4>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="openModal('offerModal')">Публичная оферта</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('privacyModal')">Политика конфиденциальности</a></li>
+            <li><a href="#guarantee">Условия возврата</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Прямой контакт</h4>
+          <ul>
+            <li><a href="https://t.me/easouthpaw" target="_blank" rel="noopener noreferrer">Telegram: @easouthpaw</a></li>
+            <li><a href="https://wa.me/77470124268" target="_blank" rel="noopener noreferrer">WhatsApp: +7 747 012 42 68</a></li>
+            <li><a href="mailto:easouthpaw@mail.ru">easouthpaw@mail.ru</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 qoyan subs. Все права защищены.</p>
+        <p class="disclaimer">Все торговые марки, названия сервисов и логотипы принадлежат их правообладателям и используются исключительно в ознакомительных целях.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Публичная оферта -->
+  <div class="modal-overlay" id="offerModal" aria-hidden="true" role="dialog" aria-labelledby="offerTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="offerTitle" class="modal-title">Публичная оферта (Договор купли-продажи цифровых доступов)</h3>
+        <button type="button" class="modal-close" onclick="closeModal('offerModal')" aria-label="Закрыть">✕</button>
+      </div>
+      <div class="modal-body">
+        <h4>1. Общие положения</h4>
+        <p>1.1. Настоящий документ является официальным предложением (публичной офертой) сервиса «qoyan subs» (далее — Исполнитель/Продавец) заключить договор на предоставление доступа к цифровым сервисам и подпискам на изложенных ниже условиях.</p>
+        <p>1.2. Оформление заказа через сайт, форму обратной связи, а также через Telegram или WhatsApp является полным и безоговорочным принятием (акцептом) настоящей Оферты.</p>
+
+        <h4>2. Предмет оферты</h4>
+        <p>2.1. Исполнитель обязуется передать Покупателю данные доступа (логин/пароль, персональное приглашение в рабочую группу или код активации) к выбранному цифровому сервису (Gemini AI, Canva, Coursera, CapCut, Duolingo), а Покупатель обязуется оплатить стоимость согласно действующему прайс-листу.</p>
+
+        <h4 class="highlight-head">3. Гарантийные обязательства и правила возврата</h4>
+        <div class="modal-alert-box">
+          <p><strong>3.1. Гарантия предоставляется исключительно на момент первичной активации продукта и передачи данных доступа.</strong></p>
+          <p>3.2. Перед отправкой данных доступа Покупателю Исполнитель проверяет их валидность. Покупатель обязан проверить работоспособность полученного доступа незамедлительно после получения.</p>
+          <p>3.3. В случае выявления неработоспособности данных непосредственно при первичном входе Исполнитель обязуется произвести замену данных доступа либо устранить причину ошибки.</p>
+          <p><strong>3.4. После успешного входа в аккаунт, добавления в команду либо первичной активации подписки обязательства Исполнителя считаются выполненными в полном объеме. Возврат денежных средств не производится.</strong></p>
+          <p>3.5. Исполнитель не несет ответственности за последующие технические сбои, блокировки или изменения пользовательских соглашений сторонних сервисов (Google, Canva, Coursera, Bytedance/CapCut, Duolingo).</p>
+        </div>
+
+        <h4>4. Порядок оплаты и выдачи</h4>
+        <p>4.1. Оплата производится в казахстанских тенге (₸) по согласованию сторон (Kaspi / банковский перевод / электронные платежи).</p>
+        <p>4.2. Выдача доступа производится в личные сообщения мессенджера (Telegram или WhatsApp), указанного Покупателем при оформлении заявки.</p>
+
+        <h4>5. Заключительные положения</h4>
+        <p>5.1. Акцептуя оферту, Покупатель подтверждает свое совершеннолетие и дееспособность, а также осознанное согласие со всеми приведенными пунктами.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="closeModal('offerModal')">Я ознакомился(-ась)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Политика конфиденциальности -->
+  <div class="modal-overlay" id="privacyModal" aria-hidden="true" role="dialog" aria-labelledby="privacyTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="privacyTitle" class="modal-title">Политика конфиденциальности и обработки данных</h3>
+        <button type="button" class="modal-close" onclick="closeModal('privacyModal')" aria-label="Закрыть">✕</button>
+      </div>
+      <div class="modal-body">
+        <h4>1. Сбор информации</h4>
+        <p>Сервис «qoyan subs» собирает только минимально необходимый объем контактных данных, добровольно предоставляемых клиентом:</p>
+        <ul>
+          <li>Имя клиента;</li>
+          <li>Контактный номер WhatsApp или никнейм в Telegram;</li>
+          <li>Адрес электронной почты (при заполнении через Formspree);</li>
+          <li>Наименование выбранного цифрового продукта.</li>
+        </ul>
+
+        <h4>2. Цели использования</h4>
+        <p>Предоставленная информация используется исключительно для:</p>
+        <ul>
+          <li>Связи с клиентом для уточнения деталей заказа;</li>
+          <li>Передачи реквизитов и учетных данных приобретенной подписки;</li>
+          <li>Оказания технической поддержки при первичной активации.</li>
+        </ul>
+
+        <h4>3. Защита и нераспространение данных</h4>
+        <p>3.1. Мы не передаем контакты клиентов третьим лицам, рекламным агентствам или сторонним сервисам.</p>
+        <p>3.2. Мы не запрашиваем и не храним реквизиты банковских карт и пароли от личных банковских приложений клиентов.</p>
+
+        <h4>4. Контакты администратора</h4>
+        <p>По любым вопросам обработки контактной информации обращайтесь на почту <strong>easouthpaw@mail.ru</strong> или в Telegram <strong>@easouthpaw</strong>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="closeModal('privacyModal')">Понятно</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
