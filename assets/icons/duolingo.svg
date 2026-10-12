@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="12" fill="#58CC02"/>
+  <!-- Owl face details -->
+  <!-- Left Eye Outer -->
+  <circle cx="17" cy="22" r="7" fill="#FFFFFF"/>
+  <!-- Right Eye Outer -->
+  <circle cx="31" cy="22" r="7" fill="#FFFFFF"/>
+  <!-- Left Pupil -->
+  <circle cx="18" cy="22" r="3.5" fill="#4B4B4B"/>
+  <circle cx="19" cy="21" r="1.2" fill="#FFFFFF"/>
+  <!-- Right Pupil -->
+  <circle cx="30" cy="22" r="3.5" fill="#4B4B4B"/>
+  <circle cx="31" cy="21" r="1.2" fill="#FFFFFF"/>
+  <!-- Beak -->
+  <path d="M21 27h6c0 3-3 5.5-3 5.5S21 30 21 27z" fill="#FF9600"/>
+</svg>
